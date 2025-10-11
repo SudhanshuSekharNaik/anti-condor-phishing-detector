@@ -22,6 +22,9 @@ The model demonstrates excellent performance in detecting phishing URLs while ma
 
 ## 📈 Graph Explanations
 
+<img width="1490" height="1181" alt="image" src="https://github.com/user-attachments/assets/1366128f-2707-4394-bdde-35860d2fd139" />
+
+
 ### 1. Confusion Matrix
 **Purpose**: Shows model classification performance
 - **True Positives (TP)**: Correctly identified phishing URLs
