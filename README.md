@@ -143,7 +143,7 @@ Installation Methods
 Method 1: Quick Install (Recommended)
 bash
 # Clone repository
-git clone https://github.com/yourusername/anti-condor.git
+git clone https://github.com/sudhanshusekharnaik/anti-condor.git
 cd anti-condor
 
 # Install with pip
