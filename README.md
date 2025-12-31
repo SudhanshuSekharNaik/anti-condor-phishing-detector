@@ -1,4 +1,3 @@
-write a readme for this model in etails
 🛡️ ANTI-CONDOR: Advanced Phishing URL Detection System
 
 🌟 Overview
@@ -660,71 +659,7 @@ def batch_predict(urls: List[str]) -> List[Dict]:
             ...
         ]
     """
-⚙️ Advanced Configuration
-Custom Feature Weights
-python
-# Modify feature importance
-detector.feature_weights = {
-    'brand_mismatch': 1.5,    # Increase emphasis
-    'https_score': 1.2,       # Prioritize HTTPS
-    'url_length': 0.8,        # Reduce emphasis
-    'digit_ratio': 0.9,       # Slight reduction
-}
 
-# Re-train with custom weights
-detector.retrain_with_weights(custom_weights)
-Threshold Tuning
-python
-# Adjust confidence thresholds
-detector.set_thresholds(
-    phishing_min=0.80,      # Lower bound for phishing
-    phishing_max=0.95,      # Upper bound for phishing
-    safe_min=0.85,          # Lower bound for safe
-    safe_max=0.98,          # Upper bound for safe
-    high_confidence=0.95,   # High confidence threshold
-    medium_confidence=0.90   # Medium confidence threshold
-)
-Custom Training Parameters
-python
-# Advanced model configuration
-advanced_config = {
-    'n_estimators': 100,
-    'max_depth': 12,
-    'min_samples_split': 5,
-    'min_samples_leaf': 2,
-    'max_features': 'log2',
-    'criterion': 'gini',
-    'bootstrap': True,
-    'oob_score': True,
-    'warm_start': False,
-    'class_weight': {0: 1, 1: 2},  # Weight phishing 2x more
-    'random_state': 42
-}
-
-detector.train_with_config(advanced_config)
-Integration with External Services
-python
-# Combine with threat intelligence
-def enhanced_predict(url, use_external=True):
-    """Predict with external threat intelligence"""
-    
-    # Local model prediction
-    local_pred, local_prob = detector.predict(url)
-    
-    if use_external:
-        # Check external services
-        vt_result = check_virustotal(url)
-        pt_result = check_phishtank(url)
-        gsb_result = check_google_safebrowsing(url)
-        
-        # Combine results
-        final_pred = combine_predictions(
-            local_pred, vt_result, pt_result, gsb_result
-        )
-    else:
-        final_pred = local_pred
-    
-    return final_pred, local_prob
 📊 Benchmarks
 Performance Comparison
 Metric	ANTI-CONDOR	Google Safe Browsing*	PhishTank*	OpenPhish*
